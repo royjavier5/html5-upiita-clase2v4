@@ -3,13 +3,34 @@
         <title>JavaScript</title>
         <meta charset="UTF-8"/>
         <script>
-			//variables validas
+			/*variables validas
+			var palabra = "hola";
+			var num = 2; 
+			var $ = "pesitos";
+			var _ = "guion bajo";
+			*/
+			
 			//alert
+			//alert(palabra + " adios " + num );
+			
 
-			//document.write
+			/* 
+			 * document.write($ + " " + _);
+			 *document.write("<h1>Título</h1>");
+			 */
+			
+			
+			
 			//inserta html
 
-			//prompt
+			//prompt: espera a que nosotros insertemos algo
+			var nombre = prompt("¿Como te llamas? ");
+			var apellido = prompt("¿Cual es tu apellido?");
+			var edad = prompt("Cual es tu edad?");
+			document.write("<h3>Datos personales: </h3>" + 
+							 "<p> Nombre: "+ nombre + "<br /> Apellido: " + 	apellido + "<br />Edad: " + edad + 
+							 "</p>" );
+			
         </script>
     </head>
     <body></body>

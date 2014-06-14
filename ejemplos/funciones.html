@@ -1,17 +1,67 @@
 <html>
-    <head>
-        <title>JavaScript</title>
-        <meta charset="UTF-8"/>
-        <script>
-        
-            //funcion
-            
-            //funcion anonima
-            
-            //una funcion como argumento
-            //sepuede definir ahi mismo
+	<head>
+		<title>JavaScript</title>
+		<meta charset="UTF-8"/>
+		<script>
+			//funcion
+			function saludar(nombre) {
+				alert("Hola amigo" + nombre);
+				return 0;
+			}
 
-        </script>
-    </head>
-    <body></body>
+			var num = saludar("Roy");
+
+			document.write(num);
+
+			//funcion anonima o lamdas  /* funcion que se puede guardar en una variable*/
+			var c = 0;
+
+			var sumar = function(a, b) {
+				var c = a + b;
+				return c;
+			};
+			document.write("<h2>El valor de c es: " + c + "</h2>");
+			var multiplicar = function(a, b) {
+				var c = a * b;
+				return c;
+			};
+
+			var suma = sumar(2, 5);
+			var multiplica = multiplicar(2, 5);
+			document.write("<h2>SUMA " + suma + "</h2>");
+			document.write("<h2>MULTIPLICACION " + multiplica + "</h2>");
+			
+			//una funcion como argumento
+			var operacion = function(unaFuncion){
+				var resultado = unaFuncion(3,4);
+				alert("El resultado es: " + resultado);
+			};
+			
+			operacion(sumar);
+			//sepuede definir ahi mismo
+			
+			//closure - Autoejecutable
+			
+			( function(){
+				var sumar = function(){
+					document.write("soy la funcion1");
+				};
+				var c = 5;
+				
+				sumar(); 				
+			}) ();
+
+
+			//funciones 
+			
+			operacion(function(a,b) {
+				var c = a - b;
+				return c;
+			});
+
+			//Llamar a la 
+
+		</script>
+	</head>
+	<body></body>
 </html>
